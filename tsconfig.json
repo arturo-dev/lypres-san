@@ -16,6 +16,26 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-core": [
+        "dist/ngx-core"
+      ],
+      "ngx-core/*": [
+        "dist/ngx-core/*"
+      ],
+      "ngx-presn": [
+        "dist/ngx-presn"
+      ],
+      "ngx-presn/*": [
+        "dist/ngx-presn/*"
+      ],
+      "ngx-smart": [
+        "dist/ngx-smart"
+      ],
+      "ngx-smart/*": [
+        "dist/ngx-smart/*"
+      ]
+    }
   }
 }

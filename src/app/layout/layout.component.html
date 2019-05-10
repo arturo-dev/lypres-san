@@ -1,0 +1,55 @@
+<mat-sidenav-container class="all-wrap">
+  <mat-sidenav>Start</mat-sidenav>
+  <mat-sidenav-content  class="page-wrap">
+    <mat-toolbar class="header" color="primary">
+      <mat-toolbar-row class="row-header">
+        <img class="logo" src="assets/img/icon-santander.jpg" alt="Icono Banco Santander" />
+        <div>
+          <div class="brand">Santander</div>
+          <div class="sub">Leasing & Renting</div>
+        </div>
+        <span class="spacer"></span>
+        <button mat-icon-button>
+          <mat-icon aria-hidden="false" aria-label="">
+            perm_identity
+          </mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon aria-hidden="false" aria-label="">
+            power_settings_new
+          </mat-icon>
+        </button>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="row-menu">
+        <nav>
+          <ul>
+            <li class="active">
+              <a routerLink="/" routerLinkActive="active">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="/leasing" routerLinkActive="active">
+                <mat-icon>account_balance</mat-icon>
+                <span>Leasing</span>
+              </a>
+            </li>
+            <li>
+              <mat-icon>account_balance_wallet</mat-icon>
+              <span>Renting</span>
+            </li>
+          </ul>
+        </nav>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <main class="content">
+      <ng-content></ng-content>
+    </main>
+
+    <footer>
+      © Banco Santander, S.A. Satander es una marca registrada. Todos los derechos reservados.
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,15 @@
+@import '~@angular/material/theming';
+
+mat-card-title {
+  color: red;
+}
+
+.home-card {
+    margin: 24px;
+
+    button {
+      &:hover {
+        @include mat-elevation(6);
+      }
+    }
+  }

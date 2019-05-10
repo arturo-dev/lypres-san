@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Lato', "Helvetica Neue", sans-serif; }
+
+
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+// Define the default theme (same as the example above).
+$sanes-brand: (
+    50: #ec0000,
+    100: #ec0000,
+    200: #ec0000,
+    300: #ec0000,
+    400: #ec0000,
+    500: #ec0000,
+    600: #ec0000,
+    700: #ec0000,
+    800: #ec0000,
+    900: #ec0000,
+    A100: #ec0000,
+    A200: #ec0000,
+    A400: #ec0000,
+    A700: #ec0000,
+    contrast: (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: $black-87-opacity,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+        A100: $black-87-opacity,
+        A200: $black-87-opacity,
+        A400: $black-87-opacity,
+        A700: white,
+    )
+);
+
+$sanes-app-primary: mat-palette($sanes-brand);
+$sanes-app-accent:  mat-palette($mat-grey, A200, A100, A400);
+$sanes-app-theme:   mat-light-theme($sanes-app-primary, $sanes-app-accent);
+
+// Include the default theme styles.
+@include angular-material-theme($sanes-app-theme);
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  &[mat-raised-button] {
+    border-radius: 40px;
+    padding: 0 24px;
+  }
+}

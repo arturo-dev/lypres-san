@@ -1,0 +1,132 @@
+@import '~@angular/material/theming';
+
+.header {
+
+  .row-header {
+    @include mat-elevation(2);
+  }
+
+  .row-menu {
+    background-color: white;
+    color: black;
+  }
+
+
+  .logo {
+    width: 60px;
+  }
+
+  .brand {
+    font-size: 1.3em;
+    padding-top: 10px;
+    font-weight: bold;
+  }
+
+  .sub {
+    font-size: 0.6em;
+    margin-top: -10px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+      position: relative;
+
+      li {
+        position: relative;
+        padding: 0px 24px;
+        font-size: 0.8em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 80%;
+          height: 2px;
+          bottom: 0;
+          background: red;
+          visibility: hidden;
+          border-radius: 5px;
+          transform: scaleX(0);
+          transition: .25s linear;
+        }
+
+        &:hover:before,
+        &:focus:before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+
+        mat-icon {
+          vertical-align: sub;
+        }
+
+        span {
+          margin-left: 7px;
+        }
+
+        &:hover,
+        &.active {
+          color: red;
+        }
+      }
+    }
+
+  }
+}
+
+.content {
+  margin: 0px 32px;
+}
+
+footer {
+  background-color: gray;
+  color: white;
+  text-align: center;
+  padding: 7px;
+}
+
+/*
+ * Actual Sticky Footer Styles
+ */
+
+.all-wrap {
+  min-height: 100vh; // same height as browser window height
+}
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // same height as browser window height
+}
+
+.content {
+  flex: 1; // child will set to an equal size inside the container
+}
+
+
+/*
+ * Make the component injected by <router-outlet> full height:
+ */
+
+main {
+
+  display: flex;
+  flex-direction: column;
+
+  // Select all direct descendants only of the <main> element
+  // that are not <router-outlet> elements:
+  > *:not(router-outlet) {
+
+    flex: 1; // child will set to an equal size inside the container
+    display: block;
+
+  }
+
+}

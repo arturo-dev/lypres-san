@@ -1,0 +1,53 @@
+<section>
+  <div>
+    <span>Prescriptor:&nbsp;</span>
+    <span><b>{{ prescriptor }}</b></span>
+  </div>
+
+  <mat-grid-list cols="4" [rowHeight]="240">
+    <mat-grid-tile [colspan]="1">
+      <mat-card class="home-card">
+        <mat-card-header>
+          <mat-card-title>Leasing</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus, diam vitae venenatis dignissim, ipsum
+            lectus ultrices purus, quis blandit augue risus vitae urna. Nullam nec convallis orci. Maecenas varius eget ligula nec
+            porta.
+          </p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-raised-button color="primary" (click)="navLeasing()">Acceder</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1">
+      <mat-card class="home-card">
+        <mat-card-header>
+          <mat-card-title>Renting</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus, diam vitae venenatis dignissim, ipsum
+            lectus ultrices purus, quis blandit augue risus vitae urna. Nullam nec convallis orci. Maecenas varius eget ligula nec
+            porta.
+          </p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-raised-button color="primary">Acceder</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1"></mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1">
+      <img src="assets/img/bansatec-mock.PNG" style="height: 240px;" />
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <img src="assets/img/mock-1.PNG" style="width: 100%;" />
+
+</section>

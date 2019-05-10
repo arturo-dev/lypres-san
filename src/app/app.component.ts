@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DateAdapter } from '@angular/material/core';
 
 @Component({
   selector: 'lypres-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'lypres-ui';
+
+  constructor(private adapter: DateAdapter<any>) {
+    adapter.setLocale('es');
+  }
+
 }

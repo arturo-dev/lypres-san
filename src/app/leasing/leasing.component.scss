@@ -1,0 +1,41 @@
+mat-expansion-panel {
+  margin: 24px;
+
+  mat-panel-title {
+    color: red;
+    font-weight: bold;
+  }
+
+  .cnt-states {
+    position: absolute;
+    left: 70px;
+
+    mat-radio-button {
+      margin: 0px 24px;
+    }
+  }
+
+}
+
+.cnt-table {
+  width: calc(100% - 48px);
+  margin: 24px;
+}
+
+.card-no-content {
+  margin: 24px;
+}
+
+table {
+  width: 100%;
+
+  th {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.tab-icon {
+  margin-right: 17px;
+}
